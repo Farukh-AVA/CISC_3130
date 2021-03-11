@@ -1,1 +1,106 @@
-
+In this assignment, you will write a class that implements a contact book
+entry. For example, my iPhone (and pretty much any smartphone) has a contacts
+list app that allows you to store information about your friends, colleagues, and
+businesses. In later assignments, you will have to implement this type of app (as a
+command line program, of course.) For now, you will just have to implement the
+building blocks for this app, namely, the Contact class.
+Your Contact class should have the following private data:
+• The first name of the person
+• The last name of the person
+•The phone number of the person
+• The street address of the person
+• The city of the person
+• The state of the person
+The Contact class should implement the Comparable interface. More on this later.
+Of course, you may implement private helper methods if it helps your
+implementation.
+Your class should have the following public methods:
+• A constructor that initializes all the fields with information.
+• A constructor that initializes only the name and phone number.
+• accessor (getter) methods for all of the data members.
+• an update method that allows the user to change all information. (They must
+change all of it).
+• An overridden equals() method that can tell if one Contact is the same as another.
+It should have the method signature:
+public boolean equals(Object obj);
+We will define one Contact as being the same as another contact if the first and last
+names both match. (Be careful! The parameter may not be a bona fide Contact!)
+• An overridden toString() method that creates a printable representation for a
+Contact object. 
+It should have the method signature:
+public String toString();
+The String should be created in the following form:
+<First name> <last name> Phone number: <phone number>
+<street address>
+<city> , <state>
+For example my contact info would look like:
+Ari Mermelstein Phone number: (718) 111-1111
+2900 Beford Avenue
+Brooklyn, NY
+• A comparison method that looks like this:
+public int compareTo(Contact another);
+We will define this method in the following way:
+ If the last name of “another” is lexicographically first, return a positive
+number.
+ If the last name of “another” is lexicographically second, return a negative
+number.
+ If the last names are the same and the first names are also the same, return 0.
+ If the last names are the same and the first names are different, use the first
+names to determine the order.
+You must also declare the fact that Contact implements the Comparable interface.
+You must also write a main program that tests each of these functions and
+shows me that you understand how to use the Contact class in a program.
+You can choose to write this main program as a stand alone class that sits in the
+same directory as the Contact class, or you can just make the main program the
+main program of the Contact class itself. It doesn’t matter much to me.
+------------------------------------------------------------------------------------
+In this homework assignment, you will implement a Contact List class. This assignment
+(and some subsequent ones) will use the Contact class from homework 1.
+ Your ContactList should use an ArrayList (from the java collections hierarchy) as the
+underlying structure. Your ContactList class must implement the Iterable<Contact> interface(!).
+The Contacts stored in your ArrayList should be stored in sorted order by the compareTo()
+method of the Contact class.
+Your ContactList should have the following functionality:
+Constructors:
+- A constructor that creates an empty ContactList.
+- A constructor that uses an array of Contacts in order to initialize the ContactList,
+ ContactList(Contact [ ] contacts);
+ HINT: You can use the Arrays.asList() method described in class.
+Operations:
+- A method that searches for a particular contact by last name, and returns a reference
+to the Contact. If there is no such Contact, a sentinel value (e.g. a default valued
+Contact or null) should be returned. Since the list is in sorted order, this method
+should be a binary search of the list.
+ Contact findByLastName(String last);
+- A method that searches for a Contact by phone number, and returns a reference to the
+Contact. If there is no such Contact, a sentinel value should be returned.
+ Contact findByPhoneNumber(String phone);
+- A method that searches for and returns a ContactList containing all Contacts with a
+last name starting with a particular letter. If there are no such Contacts, you should
+return the empty ContactList.
+ ContactList findAllByLastInitial(char ch);
+- A method that searches for and returns a ContactList containing all Contacts that live
+in a particular city. If there are no such Contacts, you should return the empty
+ContactList.
+ ContactList findAllByCity(String city);
+- A method that allows you to add a Contact to the ContactList in sorted order. You
+should only add a Contact to the list if it is not there already. Use a modified binary
+search to determine this. The method returns true if the add is successful and false if
+it is unsuccessful.
+ boolean add(Contact c);
+- A method that returns the size of the ContactList.
+ int size();
+- A method that allows you to remove and return a Contact from the ContactList.
+ Contact remove(Object obj);
+- A method that allows the client to get a Contact from the ContactList by index. An
+IndexOutOfBoundsException should be thrown if that index doesn’t exist.
+ Contact get(int index);
+- An overridden equals() method. Let’s define one ContactList being equal to another
+if they contain the same Contacts in the same order.
+ boolean equals(Object obj);
+- An overridden toString() method that creates a representation for a ContactList.
+ String toString();
+- An iterator() method that allows you to iterate through a ContactList. (You can
+implement your own or use the ArrayList’s own iterator). 
+ Iterator<Contact> iterator();
+.You must also write a test program for the ContactList class. 
