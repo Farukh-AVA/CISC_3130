@@ -1,0 +1,28 @@
+hammer 10
+grill 1000
+spatula 15
+nails 2
+paint 25
+screws 2
+wrench 20
+screwdriver 4
+gloves 30
+measuringTape 5
+saw 35
+sander 12
+pliers 8
+breadboard 15
+flux 12
+solder 5
+plywood 20
+glueSticks 10
+jumper 30
+solderingIron 20
+pliers 23
+
+
+
+
+
+
+

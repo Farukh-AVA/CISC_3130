@@ -1,0 +1,17 @@
+S 3 grill 1 hammer 3 wrench 5
+S 1 wrench 1
+S 6 hammer 1 grill 1 wrench 3 gloves 4 paint 10 spatula 2
+S 1 paint 4
+P
+S 3 screws 4 measuringTape 3 nails 1
+S 1 saw 2
+S 5 screws 10 screwdriver 1 nails 15 paint 2 pliers 5
+P
+S 5 breadboard 6 flux 3 solder 6 plywood 1 glueSticks 2
+S 1 jumper 2 
+S 3 saw 1 nails 10 hammer 2
+S 4 screwdriver 2 screws 5 solderingIron 1 pliers 1
+P
+
+
+
