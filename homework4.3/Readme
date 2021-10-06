@@ -1,14 +1,9 @@
-In this assignment you will be asked to implement a simulator for a hardware store.
-(This will contain a number of classes and a lot of moving parts, so please ask a lot of questions.)
-This assignment will require you to use the ArrayList or LinkedList (your choice), in addition to
-the Queue interface and PriorityQueue You will also need to use your object oriented
+In this assignment I implement a simulator for a hardware store.
+(This will contain a number of classes and a lot of moving parts)
+This program will require you to use the ArrayList, in addition to
+the Queue interface and PriorityQueue I implemented this program with object oriented
 programming skills to create clean, maintainable code.
-(N.B. If your code is not documented, you will not receive credit. This means that if you write
-any line of code that isn’t completely trivial, you must explain it to me.
-You may not use any code or any function that I have not discussed in class. Any fancy
-algorithm you use must be written by you or discussed with me beforehand. I have been getting
-some interesting code for which ascertaining its correctness is almost impossible.)
-You will create the following classes. I will provide prototypes below:
+I will create the following classes. I will provide prototypes below:
 An Item class that models the name and price of something that is sold in a hardware store. For
 example, a hammer that costs $10.50.
 This class must support the following operations:
@@ -77,14 +72,14 @@ P (which means process) followed by no additional information.
 Or
 S n item1 numberOfPiecesOfItem1 item2 numberOfPiecesOfItem2 … itemN
 numberOfPiecesOfItemN
-When you see a P, you process the shopper in the front of the longest line.
-When you see an S, you create a new shopper out of these information, add the shopper that the
+When I see a P, I will process the shopper in the front of the longest line.
+When I see an S, I create a new shopper out of these information, add the shopper that the
 priority queue says should go next into line, and then add this new shopper to the priority queue.
 When the file is over, put the remaining Shoppers from the priority queue into the lines, and then
 process the rest of the shoppers.
-You must write a main program that will read in the inventory file and store that information in the
+You will write a main program that will read in the inventory file and store that information in the
 HardwareStore’s inventory vector. Then, it will read in the event file and process the shoppers in it.
-You must submit the following files:
+You created the following files:
 Item.java
 ShoppingCart.java
 Shopper.java
